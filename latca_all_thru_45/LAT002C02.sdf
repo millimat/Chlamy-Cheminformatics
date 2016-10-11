@@ -1,0 +1,55 @@
+
+  -ISIS-  08130814242D
+
+  5  2  0  0  0  0  0  0  0  0999 V2000
+    5.0500   -5.7417    0.0000 N   0  0  0  0  0  0  0  0  0  0  0  0
+    6.1792   -5.4667    0.0000 Pt  0  0  0  0  0  0  0  0  0  0  0  0
+    6.1792   -6.2917    0.0000 Cl  0  0  0  0  0  0  0  0  0  0  0  0
+    6.8917   -5.0542    0.0000 Cl  0  0  0  0  0  0  0  0  0  0  0  0
+    5.3625   -4.6500    0.0000 N   0  0  0  0  0  0  0  0  0  0  0  0
+  3  2  1  0  0  0  0
+  4  2  1  0  0  0  0
+M  END
+> <#>
+83
+
+> <PLATE>
+LAT002
+
+> <ROW>
+C
+
+> <COL>
+2
+
+> <COORD>
+C02
+
+> <LATID>
+LAT002C02
+
+> <Supplier>
+Microsource
+
+> <Suplier_CAT#>
+01502107
+
+> <Name>
+Cisplatin
+
+> <Concentration_(mM)>
+2.5
+
+> <IC50_(µM)>
+37
+
+> <Yeast_Active?>
+-
+
+> <Pubchem_CID>
+5460033
+
+> <Description>
+Antineoplastic, Convulsant
+
+$$$$

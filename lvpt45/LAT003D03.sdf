@@ -1,0 +1,65 @@
+
+  -ISIS-  08130814242D
+
+  7  7  0  0  0  0  0  0  0  0999 V2000
+    5.3417   -3.7250    0.0000 C   0  0  2  0  0  0  0  0  0  0  0  0
+    5.8792   -4.2542    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    4.7000   -3.3500    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    4.7000   -4.1000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    6.6000   -4.0542    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+    6.0542   -3.5292    0.0000 N   0  0  0  0  0  0  0  0  0  0  0  0
+    5.6917   -4.9667    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  1  0  0  0
+  3  1  1  0  0  0  0
+  4  1  1  0  0  0  0
+  5  2  2  0  0  0  0
+  1  6  1  6  0  0  0
+  7  2  1  0  0  0  0
+  3  4  1  0  0  0  0
+M  END
+> <#>
+172
+
+> <PLATE>
+LAT003
+
+> <ROW>
+D
+
+> <COL>
+3
+
+> <COORD>
+D03
+
+> <LATID>
+LAT003D03
+
+> <Supplier>
+Microsource
+
+> <Suplier_CAT#>
+01502130
+
+> <Name>
+ACC
+
+> <Concentration_(mM)>
+2.5
+
+> <IC50_(µM)>
+9
+
+> <Yeast_Active?>
+-
+
+> <Pubchem_CID>
+535
+
+> <Description>
+Plant Growth Regulator (ACC)
+
+> <Comment>
+In animals, is an NMDA glutamate receptor agonist acting at the glycine site
+
+$$$$
