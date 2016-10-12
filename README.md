@@ -15,6 +15,4 @@ That was our motivation for clustering molecules by structural similarity--and i
 Now, software packages exist to compute similarity coefficients between molecules using the ECFP algorithm. But none of the vendors we contacted got back to us before we needed the clustering data--so I read up on the Rogers/Hahn paper and took a crack at implementing the algorithm myself.
 
 ## The Code
-
-
-
+The main program
