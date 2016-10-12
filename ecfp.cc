@@ -10,55 +10,6 @@
 #include "stringhash.h"
 #include "ecfp_utils.h"
 
-/* Output results of hash function on items in lexicon "words.txt" */
-static void lexicon_hash_test() {
-  int k_max_len = 10000;
-  char s[k_max_len];
-
-  std::ifstream x("data/words.txt");
-  if(x.is_open()) {
-    int n = 0;
-    while(x.peek() != EOF && n < 100) {
-      x.getline(s, k_max_len);
-      uint32_t hash_result = SuperFastHash(s, std::strlen(s));
-      std::cout << ++n << ": " << std::setw(20) << std::left
-                << s << "\t->\t" << hash_result << std::endl;
-    }
-    x.close();
-  }
-}
-
-/* Output results of applying Hsieh's SuperFastHash to the data of the  
- * vectors [0], [0, 1], [0, 1, 2], ..., [1, 2, 3, ..., 99]. */
-static void vec_hash_test() {
-  std::vector<int> v;
-  for(int i = 0; i < 100; i++) {
-    v.push_back(i);
-    std::cout << std::setw(4) << std::left << i
-              << std::setw(12) << std::left << vector_hash(v, SuperFastHash) 
-              << std::endl;
-  }
-}
-
-
-/* Generate a Molecule based on the sdf or molfile at the target file, report its 
- * basic information, generate an ECFP for it, and print out the identifiers of that
- * ECFP. */
-static void basic_ecfp_test(int n_iterations, const std::string & filename, 
-                            const element_map *elements, string_hash h) {
-  Molecule m(filename, filename, elements, h);
-  std::cout << m.atoms_report() << std::endl;
-
-  m.generate_ecfp(n_iterations);
-  std::vector<uint32_t> results;
-  m.fetch_ecfp(results);
-
-  std::cout << "ECFP:\n";
-  for(uint32_t i: results) std::cout << i << "\n";
-  std::cout << std::endl;
-}
-
-
 /* Given a vector of molecules with their ecfp's generated, create a
  * matrix of Tanimoto similarity coefficients between pairs of molecules
  * and return it as a double **. The (i,j) entry of the matrix lists the
@@ -120,20 +71,6 @@ static void write_cytoscape_table(const std::string & dirname, const std::string
   output.close();
 }
 
-// int main(int argc, char *argv[]) {
-//   if(argc != 3) {
-//     std::cout << "usage: " << argv[0] << " [niterations] [filename]" << std::endl;
-//     return 1;
-//   }
-  
-//   const element_map *elements = symbols_to_weights();
-//   int n_iterations = std::stoi(argv[1]);
-//   std::string filename = argv[2];
-//   basic_ecfp_test(n_iterations, filename, elements, SuperFastHash);
-
-//   delete elements;
-//   return 0;
-// }
 
 
 

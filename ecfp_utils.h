@@ -10,11 +10,13 @@
 #include <fstream>
 #include <cstdlib>
 
+static const std::string atominfo_path = "data/weights.txt";
+
 /* Construct a Map taking element symbols to their atomic numbers and the
  * masses of their most abundant isotopes. */
 const element_map *symbols_to_weights() {
   element_map *result = new element_map;
-  std::ifstream weight_table("data/weights.txt"); // file mapping symbols to weights
+  std::ifstream weight_table(atominfo_path); // file mapping symbols to weights
   std::string elem_temp, number_temp, weight_temp;
 
   while(weight_table.peek() != EOF) {
@@ -25,14 +27,6 @@ const element_map *symbols_to_weights() {
   }
 
   return result;
-}
-
-/* Print the elements of an element_map with their atomic numbers and masses. */
-static void print_contents(const element_map *m) {
-  for(std::pair<std::string, element> elem: *m) {
-    std::cout << elem.first << ": " << elem.second.atomic_number
-              << ", " << elem.second.atomic_mass << std::endl;
-  }
 }
 
 /* Extract a valid number of ECFP iterations (i.e. a nonnegative integer)
